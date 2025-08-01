@@ -1,13 +1,12 @@
-{% load tree_menu_tags %}
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Главная страница с меню</title>
-</head>
-<body>
-  <h1>Главное меню</h1>
-  {% draw_menu 'main_menu' %}
-  <hr>
-</body>
-</html>
+
+{% extends "tree_menu/base.html" %}
+{% block title %}Главная{% endblock %}
+{% block menu %}
+    <nav class="menu tree-menu mb-3">
+        {% draw_menu 'main_menu' %}
+    </nav>
+{% endblock %}
+{% block content %}
+    <h2>Добро пожаловать!</h2>
+    <p class="text-muted">Это современный многоуровневый тестовый сайт на Django.</p>
+{% endblock %}

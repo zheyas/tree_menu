@@ -29,38 +29,22 @@ git clone https://github.com/zheyas/tree_menu.git
 pip install -r requirements.txt
 ```
 
-2. Добавьте приложение в ваш `INSTALLED_APPS`:
-```
-INSTALLED_APPS = [
-        ...,
-        'tree_menu',
-    ]
-```
-3. Выполните миграции:
+2. Выполните миграции:
 ```
 python manage.py makemigrations
 python manage.py migrate 
 ```
-4. (Опционально) Заполните меню тестовыми данными:
+3. (Опционально) Заполните меню тестовыми данными:
 ```
 python manage.py fill_menus
 ``` 
 
-
-5. Зарегистрируйте меню и пункты меню через Django admin.
+4. Зарегистрируйте меню и пункты меню через Django admin.
 
 Предварительно необходимо создать суперпользователя с помощью
 ```
 python manage.py createsuperuser
 ```
-
-## Использование
-Можно вставить тег меню в нужном шаблоне:
-```
-{% load tree_menu_tags %}
-{% draw_menu 'main_menu' %}
-```
-main_menu или другой — это имя вашего меню из базы.
 
 ## Логика раскрытия
 

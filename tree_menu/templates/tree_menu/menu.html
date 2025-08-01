@@ -1,12 +1,12 @@
 
-<ul class="list-unstyled ms-1">
+<ul>
   {% for node in tree %}
     <li>
       <a href="{{ node.item.get_url }}"
-         class="nav-link {% if node.active %}active{% endif %}">
-          {{ node.item.title }}
+         {% if node.active_path %}style="color:magenta"{% endif %}>
+         {{ node.item.title }}
       </a>
-      {% if node.show_children and node.children %}
+      {% if node.children and node.show_children %}
         {% include "tree_menu/menu.html" with tree=node.children %}
       {% endif %}
     </li>

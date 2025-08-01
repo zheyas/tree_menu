@@ -24,6 +24,10 @@
 ```
 git clone https://github.com/zheyas/tree_menu.git
 ```
+Установить зависимости 
+```
+pip install -r requirements.txt
+```
 
 2. Добавьте приложение в ваш `INSTALLED_APPS`:
 ```

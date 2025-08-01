@@ -1,0 +1,12 @@
+{% load tree_menu_tags %}
+
+<html>
+<body>
+    <h1>Главное меню</h1>
+    {% draw_menu 'main_menu' %}
+    <h1>Доп. меню</h1>
+    {% draw_menu 'footer_menu' %}
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

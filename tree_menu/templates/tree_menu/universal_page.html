@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title|default:"Страница" }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 24px; }
+        h1, h2 { color: #222; }
+        .menu { margin-bottom: 30px; }
+        .content { min-height: 300px; }
+        hr { margin: 30px 0 10px 0; }
+        ul { padding-left: 22px; }
+        ul ul { padding-left: 15px; font-size: 0.95em; }
+        a.active { font-weight: bold; color: #c00; }
+    </style>
+</head>
+<body>
+    {% load tree_menu_tags %}
+
+    <h1>{{ page_title|default:"Универсальная страница" }}</h1>
+    <nav class="menu">
+        {% draw_menu 'main_menu' %}
+    </nav>
+    <hr>
+    <div class="content">
+        {{ content|safe }}
+    </div>
+</body>
+</html>

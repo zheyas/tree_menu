@@ -29,23 +29,22 @@ git clone https://github.com/zheyas/tree_menu.git
 pip install -r requirements.txt
 ```
 
-2. Выполните миграции:
-```
-python manage.py makemigrations
-python manage.py migrate 
-```
-3. (Опционально) Заполните меню тестовыми данными:
+2. (Опционально) Заполните меню тестовыми данными:
 ```
 python manage.py fill_menus
 ``` 
 
-4. Зарегистрируйте меню и пункты меню через Django admin.
+3. Зарегистрируйте меню и пункты меню через Django admin.
 
 Предварительно необходимо создать суперпользователя с помощью
 ```
 python manage.py createsuperuser
 ```
-
+4. Запуск сервера
+Пропишите в консоли
+```
+python manage.py runserver
+```
 ## Логика раскрытия
 
 - Определяется активный пункт меню на основе request.path.

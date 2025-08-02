@@ -40,7 +40,11 @@ python manage.py fill_menus
 ```
 python manage.py createsuperuser
 ```
-
+4. Запуск сервера
+Пропишите в консоли
+```
+python manage.py runserver
+```
 ## Логика раскрытия
 
 - Определяется активный пункт меню на основе request.path.
